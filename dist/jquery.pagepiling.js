@@ -58,6 +58,16 @@
         //easeInQuart animation included in the plugin
         $.extend($.easing,{ easeInQuart: function (x, t, b, c, d) { return c*(t/=d)*t*t*t + b; }});
 
+        /////new methods
+        PP.getScrollingDirection = function() {
+            return options.direction;
+        };
+
+        PP.toggleScrollingDirection = function() {
+            options.direction = options.direction === 'vertical' ? 'horizontal' : 'vertical'
+        }
+        ///////
+        
         /**
         * Defines the scrolling speed
         */
